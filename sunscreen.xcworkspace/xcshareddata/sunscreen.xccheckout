@@ -12,6 +12,8 @@
 	<dict>
 		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
 		<string>https://github.com/openframeworks/openFrameworks</string>
+		<key>8A3E9EFCA488142143D572DB672D1BD6ED06D454</key>
+		<string>https://github.com/JoshuaBatty/sunscreen_utils</string>
 		<key>A33AA69F3BA9DA365261A1B36EEA44AA6E437B9A</key>
 		<string>https://github.com/JoshuaBatty/sunscreen</string>
 	</dict>
@@ -21,15 +23,17 @@
 	<dict>
 		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
 		<string>../..</string>
-		<key>A33AA69F3BA9DA365261A1B36EEA44AA6E437B9A</key>
+		<key>8A3E9EFCA488142143D572DB672D1BD6ED06D454</key>
 		<string>..</string>
+		<key>A33AA69F3BA9DA365261A1B36EEA44AA6E437B9A</key>
+		<string>../../sunscreen</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JoshuaBatty/sunscreen</string>
+	<string>https://github.com/JoshuaBatty/sunscreen_utils</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A33AA69F3BA9DA365261A1B36EEA44AA6E437B9A</string>
+	<string>8A3E9EFCA488142143D572DB672D1BD6ED06D454</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>A33AA69F3BA9DA365261A1B36EEA44AA6E437B9A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>sunscreen</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A3E9EFCA488142143D572DB672D1BD6ED06D454</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sunscreen_utils</string>
 		</dict>
 	</array>
 </dict>

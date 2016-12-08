@@ -8,5 +8,5 @@
 
 #pragma once 
 
-#define CAM_WIDTH 320
-#define CAM_HEIGHT 240
+#define CAM_WIDTH 640
+#define CAM_HEIGHT 480

@@ -10,8 +10,8 @@
 
 
 //--------------------------------------------------------------
-Mirror::Mirror(shared_ptr<ofAppBaseWindow> _window): faceDetector(NULL) {
-    window = _window;
+Mirror::Mirror(): faceDetector(NULL) {
+
 }
 
 //--------------------------------------------------------------
@@ -24,6 +24,7 @@ Mirror::~Mirror() {
 
 //--------------------------------------------------------------
 void Mirror::setupVideoGrabbers(int rgbDeviceID, int uvDeviceID, int w, int h) {
+
     rgbGrabber.setDeviceID(rgbDeviceID);
     uvGrabber.setDeviceID(uvDeviceID);
     

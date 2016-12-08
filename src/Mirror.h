@@ -29,7 +29,7 @@ class Mirror {
 public:
 
     // Construct the `Mirror` with the window to which its visualisations will be drawn.
-    Mirror(shared_ptr<ofAppBaseWindow> _window);
+    Mirror();
     ~Mirror();
     
     // Setup the video grabbers to use the devices specified via the given DeviceIDs.
@@ -49,9 +49,6 @@ public:
 
     // Draw the current state of the `Mirror`.
     void draw(ofEventArgs & args);
-
-    // The window used for drawing to the mirror's display.
-    shared_ptr<ofAppBaseWindow> window;
 
     // The list of people who are currently visible within this mirror.
     vector<Person> currentlyVisiblePeople;

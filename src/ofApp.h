@@ -2,13 +2,14 @@
 
 #include "ofMain.h"
 #include "Constants.h"
-#include "Mirror.h"
+#include "FaceDetector.h"
 
 
 class ofApp : public ofBaseApp {
 
 	public:
-
+    
+        ~ofApp();
 
         //////////////////////
         ///// oF Methods /////
@@ -31,21 +32,7 @@ class ofApp : public ofBaseApp {
 		void gotMessage(ofMessage msg);
 
 
-        //////////////////////////
-        ///// Custom Methods /////
-        //////////////////////////
-
-        // Grab shared pointes from main.cpp about our windows so we can query them.
-        // 
-        // Creates a new empty `Mirror` for each of the given `mirrorWindow`s.
-        //
-        // This method is called just before `setup()`.
-        void setWindows(shared_ptr<ofAppBaseWindow> _mainWindow,
-                        shared_ptr<ofAppBaseWindow> _ledWindow,
-                        vector<shared_ptr<ofAppBaseWindow> > mirrorWindows);
-
-        void drawLedWindow(ofEventArgs & args);
-
+  
 
         //////////////////
         ///// Fields /////
@@ -53,12 +40,31 @@ class ofApp : public ofBaseApp {
 
         // A handle to each window.
         shared_ptr<ofAppBaseWindow> mainWindow;
-        shared_ptr<ofAppBaseWindow> ledWindow;
 
         // A `Mirror` for each mirror in the installation.
         //
         // Each mirror contains its own `ofAppBaseWindow`, `ofVideoGrabber`s
         // and list of currently visible `Person`s.
-        vector<Mirror> mirrors;
+        //Mirror mirror;
+
+    
+        ///------ MIRROR
+        ofVideoGrabber rgbGrabber;
+        FaceDetector * faceDetector;
+
+    // All faces that are currently visible to the detector.
+    map<FaceId, DetectedFace> currentlyDetectedFaces;
+    
+    // Setup the Affectiva Detector.
+    void setupDetector(unsigned long maximumFaces, unsigned int faceMode);
+    
+    // Start the face detection.
+    void startFaceDetector();
+    
+    // Stop the face detection.
+    void stopFaceDetector();
+    
+    // Update the state of the `Mirror`.
+    void updateDetector();
 
 };
